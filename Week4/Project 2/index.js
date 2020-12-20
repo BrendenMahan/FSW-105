@@ -5,33 +5,31 @@ var Calculation = function(num1, num2, op) {
   this.y = parseInt(num2);
   this.op = op;
 
-  this.result = function() {
-    var x = this.x;
-    var y = this.y;
-    var op = this.op;
+this.result = function() {
+  var x = this.x;
+  var y = this.y;
+  var op = this.op;
 
-    if (op === "+") {
-      var result = x + y;
-    } else if (op === "-") {
+if (op === "+") {
+    var result = x + y;
+  } else if (op === "-") {
       var result = x - y;
-    } else if (op === "/") {
-      var result = x / y;
-    } else if (op === "*") {
-      var result = x * y;
-    } else if (op === "%") {
-      var result = x % y;
-    } else {
-      var result = "Error!"
-    }
+  } else if (op === "/") {
+    var result = x / y;
+  } else if (op === "*") {
+    var result = x * y;
+  } else if (op === "%") {
+    var result = x % y;
+  } else {
+    var result = "Error!"
+  }
 
-    console.log("Result: " + result);
+console.log("Result: " + result);
   };
 }
-
 var num1 = readline.question("Please enter a number: ");
 var num2 = readline.question("Please enter another number: ");
 var op = readline.question("Please enter an operator: ");
-
 var calc = new Calculation(num1, num2, op);
 
 calc.result();
