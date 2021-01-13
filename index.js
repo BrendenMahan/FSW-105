@@ -1,7 +1,7 @@
 const readLineSync = required('readline-sync');
 const name = readLineSync.question('Welcome, To my Game! What is your name?');
 var enemies = [ 'Zombie ', 'Giant Zombie', 'Rabbid Dog' ];
-var wildAdventures = function() {
+var Zombie = function() {
 var self = this;
 var enemy;
 var activeRandomEnemy = function() {
@@ -23,16 +23,16 @@ this.userAction = function(){
     self.userIsActive = false;
     console.long('Why wont you kill me? ' + enemy + '\nThe Zombies have struck again');
     setTimeout(function(){
-    console.log(':|');
+    console.log('|');
     }, 200);
     setTimeout(function(){
-        console.log(':|');
+        console.log(';');
     }, 300);
     setTimeout(function(){
-        console.log(':o');
+        console.log('o');
     }, 400);
     setTimeout(function(){
-        console.log(':(');
+        console.log('(');
     }, 500);
     setTimeout(function(){
     console.log('A Zombie has eaten you!!!');
@@ -95,4 +95,4 @@ this.initialize = function() {
 };
 this.initialize();
 };
-wildAdventures();
+Zombie();
